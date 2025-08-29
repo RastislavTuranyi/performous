@@ -246,12 +246,15 @@ std::string Song::str() const { return title + "  by  " + artist; }
 
 std::string Song::strFull() const {
 	return fmt::format(
-		"{}\n"
-		"{}\n"
-		"{}\n"
-		"{}\n"
-		"{}",
-		title, artist, genre, edition, path
+		"t:{}\n"
+		"a:{}\n"
+		"g:{}\n"
+		"e:{}\n"
+		"#:{}\n"
+		"c:{}\n"
+		"y:{}\n"
+		"p:{}",
+		title, artist, genre, edition, tags, creator, year, path
 	);
 }
 
